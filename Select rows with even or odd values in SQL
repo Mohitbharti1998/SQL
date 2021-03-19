@@ -1,0 +1,25 @@
+Syntax
+To find and return the records with the odd or even values, the most simple way is to check the remainder when we divide the column value by 2. When the remainder is 0, that’s an even number, otherwise, that’s an odd number.
+
+Here is the syntax:
+
+In PostgreSQL, My SQL, and Oracle, we use MOD function to check the remainder.
+
+To find rows where a specified column has even values:
+SELECT * 
+FROM table_name 
+WHERE mod(column_name,2) = 0;
+To find rows where a specified column has odd values:
+SELECT * 
+FROM table_name 
+WHERE mod(column_name,2) <> 0;
+In MS SQL Server, there is no MOD function and you can use %.
+
+To find rows where a specified column has even values:
+SELECT *
+FROM table_name 
+where column_name % 2 = 0;
+To find rows where a specified column has odd values:
+SELECT *
+FROM table_name 
+where column_name % 2 <> 0;
