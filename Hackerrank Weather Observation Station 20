@@ -4,6 +4,13 @@ A median is defined as a number separating the higher half of a data set from th
 Note: Oracle solutions are not permitted for this challenge.
 
 
+Solution:-
+
+The query below can be used to sort numbers first and then count with a user-defined variable:
+SET @rowIndex := -1;
+SELECT @rowIndex := @rowIndex+1 AS rowIndex, s.LAT_N FROM STATION AS s ORDER BY s.LAT_N;
+
+
 SET @rowIndex := -1;
 SELECT ROUND(AVG(t.LAT_N), 4) FROM
 (
